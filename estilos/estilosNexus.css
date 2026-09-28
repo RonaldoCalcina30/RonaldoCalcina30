@@ -252,6 +252,7 @@ footer ul {
   nav ul li a {
     font-size: 0.9rem;
     padding: 5px 8px;
+    flex-direction: column;
   }
 
   main section {
@@ -303,8 +304,9 @@ footer ul {
     gap: 10px;
   }
 
-  nav a {
+   nav ul li a {
     width: 90%;
+    flex-direction: column;
   }
 
   footer ul {
