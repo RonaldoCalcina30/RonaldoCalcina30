@@ -295,7 +295,7 @@ footer ul {
   }
 
   nav ul {
-    width: 70vw;
+    width: auto;
 
     flex-direction: column;
 
