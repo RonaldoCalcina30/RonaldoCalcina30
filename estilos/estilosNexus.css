@@ -246,6 +246,7 @@ footer ul {
 
   nav ul {
     gap: 12px;
+   flex-direction: column;
   }
 
   nav ul li a {
@@ -288,7 +289,7 @@ footer ul {
 
   header {
     align-items: center;
-
+   
     background-color: #80a8c8;
   }
 
