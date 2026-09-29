@@ -224,6 +224,6 @@ footer ul {
 ========================================================== */
 @media (max-width: 700px) {
   .barra { flex-direction: column; gap: 10px; }
-  nav a { margin: 0 5px; }
+  nav ul li a { margin: 0 5px; }
   .portada .contenedor { flex-direction: column; text-align: center; }
 }
