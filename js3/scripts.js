@@ -23,7 +23,7 @@ function dolares(){
 
 function cambiarLogo(){
     let goku = document.getElementById("goku");
-    goku.src= "imagenes/GOKU2.jpg";
+    goku.src= "imagenes3/GOKU2.jpg";
 }
 
 function cambiarTexto(){
