@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto TecNova</title>
+  <link rel="stylesheet" href="estilosinsti/estilos.css">
+  <link rel="icon" href="imagenesinsti/logo.png">
+</head>
+<body>
+  <header>
+    <div class="barra">
+      <img src="imagenesinsti/logo.png" alt="Logo Instituto TecNova">
+      <nav>
+        <a href="pagina institucional1.1.html" class="activo">Inicio</a>
+        <a href="nuestroservicios.html">Nuestros Servicios</a>
+        <a href="registro.html">Registro</a>
+      </nav>
+    </div>
+  </header>
+  <section class="formulario">
+    <h2>FORMULARIO DE CONTACTO</h2>
+    <form action="#" id="miFormulario" class="form-group">
+        <label for="nombre">Nombre: </label>
+        <input class="form-control" type="text" id="nombre" placeholder="Nombre" required/>
+        <br />
+        <label for="apellido">Apellido: </label>
+        <input class="form-control" type="text" id="apellido" placeholder="Apellido" required />
+        <br />
+        <label for="correo">Correo:</label>
+        <input class="form-control" type="email" id="correo" placeholder="xxxxxx@gmail.com" required/><br />
+        <label for="telefono">Telefono:</label>
+        <input class="form-control" type="tel" id="telefono" placeholder="123456789" required/><br />
+        <label for="edad">Edad:</label>
+        <input class="form-control" type="number" id="edad" placeholder="Edad" required /><br />
+        <label for="ciudad">Ciudad:</label>
+        <select class="form-control" name="ciudad" id="ciudad" required>
+          <option value=""disabled selected hidden>Seleccione una ciudad</option>
+          <option value="puno">Puno</option>
+          <option value="juliaca">Juliaca</option>
+          <option value="ilave">Ilave</option>
+          <option value="juli">Juli</option>
+          <option value="yunguyo">Yunguyo</option>
+          <option value="lampa">Lampa</option>
+          <option value="azangaro">Azangaro</option></select
+        ><br />
+        <label for="Carrera">Carrera:</label>
+        <select class="form-control" name="Carrera" id="Carrera" required>
+          <option value=""disabled selected hidden>Seleccione una carrera</option>
+          <option value="Computación e Informática">Computación e Informática</option>
+          <option value="Soporte Técnico y Mantenimiento de Computadoras">Soporte Técnico y Mantenimiento de Computadoras</option>
+          <option value="Redes y Comunicaciones">Redes y Comunicaciones</option>
+          <option value="Electrónica">Electrónica</option>
+          <option value="Ciencia de Datos e Inteligencia Artificial">Ciencia de Datos e Inteligencia Artificial</option>
+          <option value="Ingeniería de Software y Desarrollo Full Stack">Ingeniería de Software y Desarrollo Full Stack</option>
+          <option value="Diseño UX/UI (Experiencia e Interfaz de Usuario)">Diseño UX/UI (Experiencia e Interfaz de Usuario)</option>
+          <option value="Ciberseguridad">Ciberseguridad</option></select>
+          <br />
+        <div class="opci">
+        <label for="tipo"></label>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="tipo"
+          value="Estudiante"
+        />
+        Estudiante
+        <input
+          class="form-check-input"
+          type="radio"
+          name="tipo"
+          value="Apoderado"
+        />Apoderado
+        <br /></div>
+        <div class="opci-ter">
+        <input type="checkbox" name="terminos" required/><label for="terminos"
+          >Acepto los Terminos</label
+        ><br /></div>
+        <div class="opcion">
+        <button class="boton" onclick="limpiar()" type="reset">Limpiar</button>  
+        <button class="boton" type="submit">Aceptar</button>
+        
+        <br /></div>
+        
+      </form>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="anio"></span> Instituto TecNova - Todos los derechos reservados</p>
+    <p>Proyecto desarrollado por el Grupo 3</p>
+    <a href="index.html">volver..</a>
+    <script src="java/java.js"></script>
+  </footer>
+  
+</body>
+</html>
