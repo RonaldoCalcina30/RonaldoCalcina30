@@ -1,0 +1,281 @@
+/* ==========================================================
+   ESTILOS NEXUS - Hoja de estilos general y responsive
+   Aplica a: index.html, primera.html, segunda.html, tercera.html
+========================================================== */
+
+/* ---------- RESET BÁSICO ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #0d0d12;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #ff5cc4;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+h1, h2, h4 {
+  color: #ff5cc4;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #1a1a24, #2a0a2a);
+  border-bottom: 3px solid #ff5cc4;
+}
+
+header img {
+  margin: 15px auto 0;
+  border-radius: 10px;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* ---------- NAV ---------- */
+nav {
+  background-color: #16161f;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav ul li a {
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #ff5cc4;
+  color: #16161f;
+}
+
+/* ---------- MAIN / SECTION / ARTICLE (Grid responsive) ---------- */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+main section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+main section article {
+  background-color: #1a1a24;
+  border: 1px solid #2a2a38;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+main section article img {
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+main section article h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+main section article p {
+  font-size: 0.95rem;
+  color: #cfcfcf;
+}
+
+/* Listas dentro de artículos (segunda.html) */
+main section article ul,
+main section article ol {
+  margin: 10px 0 20px 20px;
+  color: #cfcfcf;
+}
+
+main section article h2 + ul,
+main section article h2 + ol {
+  margin-bottom: 25px;
+}
+
+/* ---------- TABLAS (tercera.html) - responsive con scroll horizontal ---------- */
+
+/* Si la sección contiene una tabla, va a una sola columna (las tablas
+   necesitan todo el ancho disponible, no la mitad como los articles) */
+main section:has(table) {
+  grid-template-columns: 1fr;
+}
+
+main section table {
+  display: block;
+  overflow-x: auto;
+  min-width: 0;      /* clave: permite que la tabla se encoja dentro de su celda del grid en vez de desbordarse */
+  max-width: 100%;
+  border-collapse: collapse;
+  background-color: #1a1a24;
+  border-radius: 10px;
+  white-space: nowrap;
+  margin-bottom: 15px;
+}
+
+main section table h2 {
+  display: block;
+  white-space: normal;
+  padding: 15px;
+  font-size: 1.3rem;
+}
+
+table tr {
+  border-bottom: 1px solid #2a2a38;
+}
+
+table th,
+table td {
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+table th {
+  background-color: #ff5cc4;
+  color: #16161f;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+table tr:nth-child(even) {
+  background-color: #20202c;
+}
+
+/* ---------- ASIDE ---------- */
+aside {
+  text-align: center;
+  margin: 20px 0;
+}
+
+aside a {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 1px solid #ff5cc4;
+  border-radius: 20px;
+}
+
+aside a:hover {
+  background-color: #ff5cc4;
+  color: #16161f;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: #16161f;
+  text-align: center;
+  padding: 25px 20px;
+  border-top: 3px solid #ff5cc4;
+}
+
+footer h4 {
+  margin-bottom: 12px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ==========================================================
+   RESPONSIVE - MEDIA QUERIES
+========================================================== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  header img {
+    width: 350px !important;
+  }
+
+  main section {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* Móviles grandes */
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header img {
+    width: 260px !important;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+
+  main section {
+    grid-template-columns: 1fr;
+  }
+
+  main section article img {
+    width: 100% !important;
+  }
+
+  table th,
+  table td {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 420px) {
+  header {
+    padding: 20px 10px;
+  }
+
+  footer ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
