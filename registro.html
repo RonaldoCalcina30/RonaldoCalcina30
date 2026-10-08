@@ -30,9 +30,9 @@
         <label for="correo">Correo:</label>
         <input class="form-control" type="email" id="correo" placeholder="xxxxxx@gmail.com" required/><br />
         <label for="telefono">Telefono:</label>
-        <input class="form-control" type="tel" id="telefono" placeholder="123456789" required/><br />
+        <input class="form-control" type="tel" id="telefono" maxlength="9" placeholder="123456789" required/><br />
         <label for="edad">Edad:</label>
-        <input class="form-control" type="number" id="edad" placeholder="Edad" required /><br />
+        <input class="form-control" type="number" id="edad" placeholder="Edad" min="15" max="80" required /><br />
         <label for="ciudad">Ciudad:</label>
         <select class="form-control" name="ciudad" id="ciudad" required>
           <option value=""disabled selected hidden>Seleccione una ciudad</option>
